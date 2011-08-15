@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr" id="html">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>jQuery Test Suite</title>
+	<link rel="Stylesheet" media="screen" href="../qunit.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../../collapick-reader-alpha.js"></script>
+	<script type="text/javascript" src="../qunit.js"></script>
+</head>
+<body id="body">
+	<h3>Test for Search Twitter</h3>
+
+	<h1 id="qunit-header">QUnit example</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">test markup, will be hidden</div>
+	
+	
+	<style type="text/css" media="screen">
+		#dataToShow{
+			
+			width:1024px;
+		}
+		#dataToShow ul{
+			background-color:#E4E4E4;
+			margin:10px 0px;
+		}
+		#dataToShow li{
+			list-style:none;
+			padding:10px;
+			
+		}
+		#dataToShow .cita{
+			font-style:italic;
+		}
+	</style>
+	<div id="dataToShow">
+		
+	</div>
+	
+	<script>
+	$(document).ready(function(){
+		CollapickReader.init({
+			container: $('#dataToShow'), 
+			apikey: '612b429b29708cbbba836585132bcea7', 
+			url: 'http://localhost:8888/Symfony/web/app_dev.php/feedback/api/find_by_apikey.json',
+			count: 10
+		});
+		
+		
+	});
+	</script>
+</body>
+</html>
