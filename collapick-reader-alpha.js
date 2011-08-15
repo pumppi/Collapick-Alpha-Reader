@@ -84,7 +84,7 @@ var AjaxService = function(options, jQueryObject){
 		}
 	};
 }();var Logger = function(){
-	var logIt = true;
+	var logIt = false;
 	
 	return{
 		log: function  (argument) {

@@ -1,0 +1,36 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="https://raw.github.com/pumppi/Collapick-Alpha-Reader-/master/collapick-reader-alpha.js"></script>
+<style type="text/css" media="screen">
+	#dataToShow{
+		
+		width:1024px;
+	}
+	#dataToShow ul{
+		background-color:#E4E4E4;
+		margin:10px 0px;
+	}
+	#dataToShow li{
+		list-style:none;
+		padding:10px;
+		
+	}
+	#dataToShow .cita{
+		font-style:italic;
+	}
+</style>
+<div id="dataToShow">
+	
+</div>
+
+<script>
+$(document).ready(function(){
+	CollapickReader.init({
+		container: $('#dataToShow'), 
+		apikey: '612b429b29708cbbba836585132bcea7', 
+		url: 'http://localhost:8888/Symfony/web/app_dev.php/feedback/api/find_by_apikey.json',
+		count: 10
+	});
+	
+	
+});
+</script>
