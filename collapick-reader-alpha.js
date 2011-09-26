@@ -44,17 +44,19 @@ var AjaxService = function(options, jQueryObject){
 	
 	
 	return that;
-};var CollapickReader = function(){
-	
+};
+var CollapickReader = function(){
+
 	var collapickContainer = false,
 	container = false,
 	requestInited = false,
 	globalInterval = false,
 	feedbackAjaxService = false;
-	
-	
+
+
 	function getDataFromServer (options) {
 		var data = {
+			www: window.location.toString(),
 			apikey: typeof options.apikey !== 'undefined' ? options.apikey: 'not-defined',
 			count: typeof options.count !== 'undefined' ? options.count : 10
 		};
@@ -69,7 +71,7 @@ var AjaxService = function(options, jQueryObject){
 			container.html(tmpHtml);
 		});
 	}
-	
+
 	return{
 		init: function  (options) {
 			//Initing classes
@@ -80,12 +82,13 @@ var AjaxService = function(options, jQueryObject){
 			container = options.container;
 			feedbackAjaxService = AjaxService({url: options.url});
 			getDataFromServer(options);
-			
+
 		}
 	};
-}();var Logger = function(){
+}();
+
+var Logger = function(){
 	var logIt = false;
-	
 	return{
 		log: function  (argument) {
 			if(logIt === true){
